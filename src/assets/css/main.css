@@ -1,0 +1,70 @@
+/*CENTERED TEXT*/
+
+.text-center {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text {
+    width: 50%;
+    font-size: 2em;
+}
+
+/*CENTERED TEXT*/
+
+
+/*SOCIAL BUTTONS*/
+
+.button-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*SOCIAL BUTTONS*/
+
+
+/* ALIGN CONTENT */
+.container {
+    display: flex;
+    /* Remove horizontal 'justify-content' center if you want the base text not to move */
+    justify-content: center;
+    align-items: center;
+}
+
+/* ADD CURSOR */
+.txt-type > .txt {
+    border-right: 0.08rem solid #fff;
+    padding-right: 2px;
+    /* Animating the cursor */
+    animation: blink 0.6s infinite;
+}
+
+/* ANIMATION */
+@keyframes blink {
+    0% {
+        border-right: 0.08rem solid rgba(255, 255, 255, 1);
+    }
+    100% {
+        border-right: 0.08rem solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+#page .section-background {
+    background: white;
+}
+
+#page section * {
+    color: black !important;
+}
+
+#page .content {
+    width: 100%;
+}
+
+
+
+
+
