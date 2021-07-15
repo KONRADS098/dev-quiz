@@ -1,48 +1,170 @@
-/*CENTERED TEXT*/
-
-.text-center {
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
 }
 
-#text {
-    width: 50%;
-    font-size: 2em;
+a {
+    color: #47b2e4;
+    text-decoration: none;
 }
 
-/*CENTERED TEXT*/
-
-
-/*SOCIAL BUTTONS*/
-
-.button-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+a:hover {
+    color: #73c5eb;
+    text-decoration: none;
 }
 
-/*SOCIAL BUTTONS*/
-
-
-/* ALIGN CONTENT */
-.container {
-    display: flex;
-    /* Remove horizontal 'justify-content' center if you want the base text not to move */
-    justify-content: center;
-    align-items: center;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Jost", sans-serif;
 }
 
-/* ADD CURSOR */
-.txt-type > .txt {
-    border-right: 0.08rem solid #fff;
-    padding-right: 2px;
-    /* Animating the cursor */
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #37517e;
+}
+
+/*--------------------------------------------------------------
+# Home Section
+--------------------------------------------------------------*/
+#home-intro {
+    width: 100%;
+    height: 100vh;
+    background-color: #24292e;
+}
+
+#home-intro .container {
+    padding-top: 72px;
+}
+
+#home-intro h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+
+#home-intro .h1-type > .txt {
+    border-right: 1rem solid #fff;
+    color: #FF654DFF;
     animation: blink 0.6s infinite;
 }
 
-/* ANIMATION */
+#home-intro p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+#home-intro .btn-get-started {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px 0 0 0;
+    color: #fff;
+    background: #FF654DFF;
+}
+
+#home-intro .btn-get-started:hover {
+    background: #FF654DFF;
+}
+
+#home-intro .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 991px) {
+    #home-intro {
+        height: 100vh;
+        text-align: center;
+    }
+
+    #home-intro .animated {
+        -webkit-animation: none;
+        animation: none;
+    }
+
+    #home-intro .intro-img {
+        text-align: center;
+    }
+
+    #home-intro .intro-img img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #home-intro h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #home-intro h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    #home-intro .intro-img img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    #home-intro .intro-img img {
+        width: 80%;
+    }
+
+    #home-intro .btn-get-started {
+        font-size: 16px;
+        padding: 10px 24px 11px 24px;
+    }
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        border-right: 0.08rem solid rgba(255, 255, 255, 1);
+    }
+    100% {
+        border-right: 0.08rem solid rgba(255, 255, 255, 0.2);
+    }
+}
+
 @keyframes blink {
     0% {
         border-right: 0.08rem solid rgba(255, 255, 255, 1);
@@ -52,19 +174,284 @@
     }
 }
 
-#page .section-background {
-    background: white;
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+#home-about {
+    width: 100%;
+    height: 100vh;
+    background-color: #f7f7f7
 }
 
-#page section * {
-    color: black !important;
+#home-about p {
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 50px;
+    font-size: 24px;
 }
 
-#page .content {
+#about-title {
+    font-family: "Jost", sans-serif;
+}
+
+@media (max-width: 991px) {
+    #home-about {
+        height: 100vh;
+        text-align: center;
+    }
+
+    #home-about .animated {
+        -webkit-animation: none;
+        animation: none;
+    }
+
+    #home-about .about-img {
+        text-align: center;
+    }
+
+    #home-about .about-img img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #home-about .about-img img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    #home-about .about-img img {
+        width: 80%;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Quiz Section
+--------------------------------------------------------------*/
+
+.card {
+    float: left;
+    margin: 10px;
+    width: 2.45em;
+    height: 2.45em;
+    background: transparent;
+}
+
+.row.countrys {
+    margin-left: -20px;
+}
+
+.card:hover {
+    display: grid;
+}
+
+.card-img-top {
+    min-height: 215px;
+    max-height: 215px;
+}
+
+#green-energy-image {
+    min-height: 400px;
+}
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+.hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hovereffect:hover .overlay {
+    background-color: rgba(170, 170, 170, 0.4);
+}
+
+.hovereffect h2, .hovereffect img {
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.hovereffect:hover img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.hovereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 50px 0 0 0;
+    background-color: transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    font-weight: normal;
+    height: 85%;
+    width: 85%;
+    position: absolute;
+    top: -20%;
+    left: 8%;
+}
+
+.hovereffect:hover a.info {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/*code for hovereffect big images*/
+.hover {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40%;
+}
+
+.hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transition: all 0.4s;
+}
+
+.hover img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.hover-content {
+    position: relative;
+    z-index: 99;
+}
+
+
+/*code for hovereffect for the big image*/
+.hover-1 img {
+    width: 105%;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: all 0.3s;
+}
+
+.hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 5px;
+    z-index: 99;
+    transition: all 0.4s;
+    height: 100%;
     width: 100%;
 }
 
+.hover-1 .hover-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
 
+.hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+}
 
+.hover-1-title {
+    margin-top: 26%;
+}
 
+.hover-1:hover .hover-1-content {
+    bottom: 2rem;
+}
+
+.hover-1:hover .hover-1-description {
+    opacity: 1;
+    transform: none;
+}
+
+.hover-1:hover img {
+    left: 0;
+}
+
+.hover-1:hover .hover-overlay {
+    opacity: 0;
+}
+
+/*code for hovereffect for the smaller images*/
+.hover-2 .hover-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+}
+
+.hover-2-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 99;
+    transition: all 0.3s;
+}
+
+.hover-2-description {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    left: 0;
+    text-align: center;
+    z-index: 99;
+    transition: all 0.3s;
+}
+
+.hover-2:hover .hover-2-title {
+    transform: translateY(-3rem);
+}
+
+.hover-2:hover .hover-2-description {
+    bottom: 0.5rem;
+    opacity: 1;
+}
+
+.hover-2:hover .hover-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}
 
