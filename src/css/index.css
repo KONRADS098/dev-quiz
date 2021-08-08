@@ -7,6 +7,7 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
+    background-color: #212529;
 }
 
 a {
@@ -23,9 +24,17 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Jost", sans-serif;
 }
 
+h2 {
+    border-bottom: 2px solid #FF654DFF;
+}
+
 section {
     padding: 60px 0;
     overflow: hidden;
+}
+
+.brand-name {
+    color: #FF654DFF;
 }
 
 /*--------------------------------------------------------------
@@ -33,7 +42,6 @@ section {
 --------------------------------------------------------------*/
 #home-intro {
     width: 100%;
-    height: 100vh;
 }
 
 #home-intro .container {
@@ -48,14 +56,14 @@ section {
     color: #fff;
 }
 
-#home-intro .h1-type > .txt {
+#home-intro h1 > .txt {
     border-right: 1rem solid #fff;
     color: #FF654DFF;
     animation: blink 0.6s infinite;
 }
 
 #home-intro p {
-    color: rgba(255, 255, 255, 0.6);
+    color: #FFFFFF99;
     margin-bottom: 50px;
     font-size: 24px;
 }
@@ -84,7 +92,6 @@ section {
 
 @media (max-width: 991px) {
     #home-intro {
-        height: 100vh;
         text-align: center;
     }
 
@@ -108,12 +115,6 @@ section {
         line-height: 36px;
     }
 
-    #home-intro h2 {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 30px;
-    }
-
     #home-intro .intro-img img {
         width: 70%;
     }
@@ -127,6 +128,18 @@ section {
     #home-intro .btn-get-started {
         font-size: 16px;
         padding: 10px 24px 11px 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #home-intro br {
+        display: none;
+    }
+}
+
+@media (min-width: 472px) and (max-width: 767px) {
+    #home-intro br {
+        display: none;
     }
 }
 
@@ -166,23 +179,28 @@ section {
     }
 }
 
+
 /*--------------------------------------------------------------
 # Quiz Section
 --------------------------------------------------------------*/
-#home-quiz {
-    background-color: #FFFFFF;
-
-}
-
 #home-quiz .container {
     padding-top: 15px;
     border-radius: 0.33rem;
+}
+
+#home-quiz h2 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
 }
 
 .hover {
     overflow: hidden;
     position: relative;
     padding-bottom: 40%;
+    background-color: white;
 }
 
 .hover-overlay {
@@ -229,8 +247,86 @@ section {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
 
-@media (max-width: 575px) {
-    #home-quiz .container {
-        border-radius: 0;
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+#home-about {
+    width: 100%;
+}
+
+#home-about .container {
+    padding-top: 72px;
+}
+
+#home-about h2 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+
+#home-about p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+#home-about .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 991px) {
+    #home-about {
+        text-align: center;
+    }
+
+    #home-about .animated {
+        -webkit-animation: none;
+        animation: none;
+    }
+
+    #home-about .about-img {
+        text-align: center;
+    }
+
+    #home-about .about-img img {
+        width: 50%;
     }
 }
+
+@media (max-width: 768px) {
+    #home-about h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #home-about .about-img img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    #home-about .about-img img {
+        width: 80%;
+    }
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+

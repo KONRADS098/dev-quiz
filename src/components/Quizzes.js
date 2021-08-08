@@ -1,8 +1,12 @@
 import {useState} from "react";
 
 const Quizzes = () => {
+    const [isDifficultySelected, setIsDifficultySelected] = useState(false);
+
+    const handleShowConfirmButton = () => setIsDifficultySelected(!isDifficultySelected);
+
     const [quizzes] = useState([
-        // {topic: "random", image_path: "../images/topics/random.png", category: "", col_size: "12", id: 1},
+        // {topic: "random", image_path: "../images/topics/random.png", category: "", col_size: "6", id: 1},
         {topic: "html", image_path: "../images/topics/html.png", category: "language", col_size: "6", id: 2},
         {
             topic: "javascript",
@@ -45,11 +49,10 @@ const Quizzes = () => {
 
     return (
         <section id="home-quiz">
-            <div className="about-title text-center mb-5">
-                <h1 className="text-white">Available Quizzes</h1>
-            </div>
-
             <div className="container">
+                <div className="quizzes-title text-center mb-5">
+                    <h2>Available Quizzes</h2>
+                </div>
                 {
                     chunked.map(row => (
                         <div className="row">
@@ -61,22 +64,24 @@ const Quizzes = () => {
                                             <img src={col.image_path} alt=""/>
                                             <div className="hover-overlay"/>
                                             <div className="row hover-2-content px-5 py-4">
-                                                <h3 className="col hover-2-title text-uppercase font-weight-bold mb-0 order-sm-first">
+                                                <h3 className="col hover-2-title text-uppercase font-weight-bold mb-0">
                                                     <span className="font-weight-light">{col.topic}</span>
                                                     <br/>{col.category}
                                                 </h3>
-                                                <div className="col hover-2-buttons text-center order-sm-last">
+                                                <div className="col hover-2-buttons text-center">
                                                     <button className="btn btn-difficulty btn-success text-uppercase"
-                                                            data-difficulty="easy">
+                                                            data-difficulty="easy" onClick={handleShowConfirmButton}>
                                                         easy
                                                     </button>
                                                     <button
                                                         className="btn btn-difficulty btn-warning ml-2 text-uppercase"
-                                                        data-difficulty="medium">medium
+                                                        data-difficulty="medium" onClick={handleShowConfirmButton}>
+                                                        medium
                                                     </button>
                                                     <button
                                                         className="btn btn-difficulty btn-danger ml-2 text-uppercase"
-                                                        data-difficulty="hard">hard
+                                                        data-difficulty="hard" onClick={handleShowConfirmButton}>
+                                                        hard
                                                     </button>
                                                 </div>
                                             </div>
