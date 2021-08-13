@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Link} from "react-router-dom";
 
 const Quizzes = () => {
     const [isDifficultySelected, setIsDifficultySelected] = useState(false);
@@ -6,55 +7,29 @@ const Quizzes = () => {
     const handleShowConfirmButton = () => setIsDifficultySelected(!isDifficultySelected);
 
     const [quizzes] = useState([
-        // {topic: "random", image_path: "../images/topics/random.png", category: "", col_size: "6", id: 1},
-        {topic: "html", image_path: "../images/topics/html.png", category: "language", col_size: "6", id: 2},
-        {
-            topic: "javascript",
-            image_path: "../images/topics/javascript.png",
-            category: "language",
-            col_size: "6",
-            id: 3
-        },
-        {topic: "linux", image_path: "../images/topics/linux.png", category: "operating system", col_size: "6", id: 4},
-        {topic: "php", image_path: "../images/topics/php.png", category: "language", col_size: "6", id: 5},
-        {topic: "laravel", image_path: "../images/topics/laravel.png", category: "framework", col_size: "6", id: 6},
-        {
-            topic: "devops",
-            image_path: "../images/topics/devops.png",
-            category: "development model",
-            col_size: "6",
-            id: 7
-        },
-        {topic: "mysql", image_path: "../images/topics/mysql.png", category: "platform", col_size: "6", id: 8},
-        {
-            topic: "kubernetes",
-            image_path: "../images/topics/kubernetes.png",
-            category: "platform",
-            col_size: "6",
-            id: 9
-        },
-        {topic: "docker", image_path: "../images/topics/docker.png", category: "platform", col_size: "6", id: 10},
-        {topic: "wordpress", image_path: "../images/topics/wordpress.png", category: "platform", col_size: "6", id: 11}
+        {topic: "linux", image_path: "../images/topics/linux.png", col_size: "6", category: "operating system", id: 1},
+        {topic: "bash", image_path: "../images/topics/bash.png", col_size: "6", category: "application", id: 2},
+        {topic: "docker", image_path: "../images/topics/docker.png", col_size: "6", category: "platform", id: 3},
+        {topic: "sql", image_path: "../images/topics/sql.png", col_size: "6", category: "language", id: 4},
+        {topic: "cms", image_path: "../images/topics/cms.png", col_size: "6", category: "software", id: 5},
+        {topic: "devops", image_path: "../images/topics/devops.png", col_size: "6", category: "model", id: 6},
     ]);
 
-
-    //split the object array into chunks, first parameter is the array itself, the second parameter is the size of the desired chunk.
-    const chunk = (array, size) =>
-        array.reduce((all, one, i) => {
-            if (i % size === 0) all.push(array.slice(i, i + size))
-            return all
-        }, [])
-
-    const chunked = chunk(quizzes, 2)
+    //Split the object array into chunks, slice the original array in to chunks of 2.
+    const slicedQuizzes = quizzes.reduce((all, one, i) => {
+        const sizeOfChunk = 2;
+        if (i % sizeOfChunk === 0) all.push(quizzes.slice(i, i + sizeOfChunk))
+        return all
+    }, [])
 
     return (
-        <section id="home-quiz">
+        <section id="home-quizzes">
             <div className="container">
                 <div className="quizzes-title text-center mb-5">
                     <h2>Available Quizzes</h2>
                 </div>
                 {
-                    chunked.map(row => (
+                    slicedQuizzes.map(row => (
                         <div className="row">
                             {
                                 row.map((col) => (
@@ -67,6 +42,13 @@ const Quizzes = () => {
                                                 <h3 className="col hover-2-title text-uppercase font-weight-bold mb-0">
                                                     <span className="font-weight-light">{col.topic}</span>
                                                     <br/>{col.category}
+                                                    <br/>
+                                                    <br/>
+                                                    <Link
+                                                        to="/quiz"
+                                                        className={`${isDifficultySelected ? '' : 'd-none'} btn btn-confirm btn btn-secondary text-uppercase`}>
+                                                        Start Quiz
+                                                    </Link>
                                                 </h3>
                                                 <div className="col hover-2-buttons text-center">
                                                     <button className="btn btn-difficulty btn-success text-uppercase"

@@ -1,7 +1,8 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Header from "./components/Header.js";
-import Home from "./components/Home.js";
-import Quizzes from "./components/Quizzes.js";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Quizzes from "./components/Quizzes";
+import Quiz from "./components/Quiz";
 import About from "./components/About";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                         </Route>
                         <Route path="/quiz">
                             <Header/>
+                            <Quiz/>
                         </Route>
                         <Route path="/about">
                             <Header/>

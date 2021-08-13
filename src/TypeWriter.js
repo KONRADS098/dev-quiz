@@ -22,6 +22,7 @@ class TypeWriter extends React.Component {
         }
     }
 
+    //Execute handleType when the component has successfully mounted
     componentDidMount() {
         this.handleType();
     }

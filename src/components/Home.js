@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom';
-import React from "react";
-import TypeWriter from "./TypeWriter.js";
+import TypeWriter from "../TypeWriter";
 
 const Home = () => {
     return (
@@ -17,8 +16,8 @@ const Home = () => {
                         <p className="lead mt-5 mb-8">Test your coding skills by completing quizzes based on your
                             specialties</p>
                         <div className="d-flex justify-content-center justify-content-lg-start">
-                            <Link to="/quizzes" className="btn-get-started mr-3">Quizzes</Link>
-                            <Link to="/about" className="btn-get-started">Learn more</Link>
+                            <Link to="/quizzes" className="btn-primary mr-3">Quizzes</Link>
+                            <Link to="/about" className="btn-primary">Learn more</Link>
                         </div>
                     </div>
                     <div className="col-lg-6 order-1 order-lg-2 intro-img">
