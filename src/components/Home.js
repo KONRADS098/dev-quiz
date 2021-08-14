@@ -10,7 +10,7 @@ const Home = () => {
                         <h1>
                             DevQuiz, the place to test your knowledge on {} <br/>
                             <TypeWriter
-                                words={["JavaScript", "MySQL", "BASH", "Laravel", "WordPress", "PHP", "Docker"]}/>
+                                words={["Linux", "BASH", "Docker", "SQL", "CMS", "DevOps"]}/>
                             {} skills
                         </h1>
                         <p className="lead mt-5 mb-8">Test your coding skills by completing quizzes based on your
