@@ -9,7 +9,7 @@ A React web-application used to quiz users knowledge on several developer like t
   <summary>   
     Home Page 
   </summary> 
-  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/new/master/readme_assets_github/devquiz_home_page.png?sanitize=true&raw=true"/>
+  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/master/readme_assets_github/devquiz_home_page.png?sanitize=true&raw=true"/>
 </details>
 <br>
 <details> 
@@ -17,7 +17,7 @@ A React web-application used to quiz users knowledge on several developer like t
   <summary>   
     Quizzes Page 
   </summary> 
-  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/new/master/readme_assets_github/devquiz_quizzes.png?sanitize=true&raw=true"/>
+  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/master/readme_assets_github/devquiz_quizzes.png?sanitize=true&raw=true"/>
 </details>
 <br>
 <details> 
@@ -25,7 +25,7 @@ A React web-application used to quiz users knowledge on several developer like t
   <summary>   
     Quiz Page 
   </summary> 
-  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/new/master/readme_assets_github/devquiz_quiz.png?sanitize=true&raw=true"/>
+  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/master/readme_assets_github/devquiz_quiz.png?sanitize=true&raw=true"/>
 </details>
 <br>
 <details> 
@@ -33,7 +33,7 @@ A React web-application used to quiz users knowledge on several developer like t
   <summary>   
     Quiz Answer Page 
   </summary> 
-  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/new/master/readme_assets_github/devquiz_quiz_answer.png?sanitize=true&raw=true"/>
+  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/master/readme_assets_github/devquiz_quiz_answer.png?sanitize=true&raw=true"/>
 </details>
 <br>
 <details>
@@ -41,7 +41,7 @@ A React web-application used to quiz users knowledge on several developer like t
   <summary>   
     Quiz Result Page 
   </summary> 
-  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/new/master/readme_assets_github/devquiz_quiz_result.png?sanitize=true&raw=true"/>
+  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/master/readme_assets_github/devquiz_quiz_result.png?sanitize=true&raw=true"/>
 </details>
 <br>
 <details>
@@ -49,7 +49,7 @@ A React web-application used to quiz users knowledge on several developer like t
   <summary>   
     About Page 
   </summary> 
-  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/new/master/readme_assets_github/devquiz_about.png?sanitize=true&raw=true"/>
+  <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/master/readme_assets_github/devquiz_about.png?sanitize=true&raw=true"/>
 </details>
 
 ## Project State
