@@ -2,7 +2,7 @@
 
 A React web-application used to quiz users knowledge on several developer like topics, built with React and regular CSS for styling the components. Uses an external API to get questions for the chosen topic and difficulty.
 
-## Project Visuals
+## Visuals
 
 <details> 
 <br>
@@ -51,10 +51,6 @@ A React web-application used to quiz users knowledge on several developer like t
   </summary> 
   <img src="https://raw.githubusercontent.com/KONRADS098/dev-quiz/master/readme_assets_github/devquiz_about.png?sanitize=true&raw=true"/>
 </details>
-
-## Project State
-
-This project is currently in development. Users can choose quiz topics and select the difficulty for the chosen topic. Functionality to get the correct quiz correlated to the chosen topic and difficulty in progress.
 
 ## Installation and Setup Instructions
 
